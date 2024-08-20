@@ -60,7 +60,7 @@
             <stringProp name="script">import java.io.File
 
 // Define the output file path
-def filePath = &apos;/home/ubuntu/apache-jmeter-5.6.3/bin/TestData/Records_IID_DID1.csv&apos;  
+def filePath = &apos;/home/ubuntu/apache-jmeter-5.3/bin/TestData/Records_IID_DID.csv&apos;  
 def file = new File(filePath)
 
 // Logging to ensure script is running
@@ -148,7 +148,7 @@ log.info(&quot;Finished writing to file.csv.&quot;)
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="filename">/home/ubuntu/apache-jmeter-5.6.3/bin/TestData/Records_IID_DID1.csv</stringProp>
+          <stringProp name="filename">/home/ubuntu/apache-jmeter-5.3/bin/TestData/Records_IID_DID.csv</stringProp>
           <boolProp name="ignoreFirstLine">true</boolProp>
           <boolProp name="quotedData">true</boolProp>
           <boolProp name="recycle">true</boolProp>
@@ -209,7 +209,7 @@ log.info(&quot;Finished writing to file.csv.&quot;)
             <intProp name="Assertion.test_type">8</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion">
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
             <stringProp name="JSON_PATH">$[&apos;status&apos;]</stringProp>
             <stringProp name="EXPECTED_VALUE">200</stringProp>
             <boolProp name="JSONVALIDATION">true</boolProp>
