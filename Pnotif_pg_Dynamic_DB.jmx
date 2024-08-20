@@ -42,7 +42,7 @@
           <stringProp name="query">SELECT iid, did
     FROM dms.mrouter
     ORDER BY RANDOM()
-    LIMIT 50000;</stringProp>
+    LIMIT 100000;</stringProp>
           <stringProp name="queryArguments"></stringProp>
           <stringProp name="queryArgumentsTypes"></stringProp>
           <stringProp name="queryTimeout"></stringProp>
@@ -135,7 +135,7 @@ log.info(&quot;Finished writing to file.csv.&quot;)
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
         <stringProp name="TestPlan.comments">${__P(Thread, 1)}</stringProp>
-        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.num_threads">${__P(Thread, 1)}</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
