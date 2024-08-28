@@ -142,8 +142,8 @@ log.info(&quot;Finished writing to file.csv.&quot;)
       </hashTree>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1763465249">
-            <stringProp name="-1729325554">${__P(numOfThreads)</stringProp>
+          <collectionProp name="418061498">
+            <stringProp name="-2069484497">${__P(numOfThreads)}</stringProp>
             <stringProp name="50">2</stringProp>
             <stringProp name="48">0</stringProp>
             <stringProp name="2133581903">${__P(holdFor)}</stringProp>
