@@ -20,7 +20,7 @@
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request">
-          <stringProp name="HTTPSampler.domain">npdlqpxkb7.execute-api.ap-south-1.amazonaws.com</stringProp>
+          <stringProp name="HTTPSampler.domain">yqe2ursqte.execute-api.ap-south-1.amazonaws.com</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/switch2/pnotif</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
