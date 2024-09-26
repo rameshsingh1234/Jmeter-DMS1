@@ -1,8 +1,0 @@
-timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
-1724228509094,426,HTTP Request,400,Bad Request,Thread Group 1-1,text,false,"Test failed: code expected to equal /
-
-****** received  : [[[4]]]00
-
-****** comparison: [[[2]]]00
-
-/",309,433,1,1,https://npdlqpxkb7.execute-api.ap-south-1.amazonaws.com/switch2/pnotif,424,0,310
