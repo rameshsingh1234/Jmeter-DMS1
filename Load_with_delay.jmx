@@ -861,7 +861,7 @@
           <hashTree/>
         </hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">1000000</stringProp>
+          <stringProp name="ConstantTimer.delay">300000</stringProp>
         </ConstantTimer>
         <hashTree/>
       </hashTree>
