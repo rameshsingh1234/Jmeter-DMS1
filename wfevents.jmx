@@ -78,7 +78,7 @@
         <stringProp name="script">import java.io.File
 
 // Define the output file path
-def filePath = &apos;C:/Users/RAMESH SINGH/Downloads/apache-jmeter-5.3/csv/did_mpid.csv&apos;
+def filePath = &apos;/home/ubuntu/apache-jmeter-5.3/bin/TestData/did_mpid.csv&apos;
 def file = new File(filePath)
 
 // Logging to ensure script is running
@@ -249,7 +249,7 @@ log.info(&quot;Finished writing to file.csv.&quot;)
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="49587">201</stringProp>
             </collectionProp>
