@@ -146,7 +146,7 @@ log.info(&quot;Finished writing to file.csv.&quot;)
         <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Request" enabled="true">
           <stringProp name="dataSource">myDb</stringProp>
           <stringProp name="queryType">Select Statement</stringProp>
-          <stringProp name="query">select mpid from dmsr.merchants</stringProp>
+          <stringProp name="query">select mpid from dmsr.merchants where mpid NOT IN (select mid from dmsr.sb where mid is not null)</stringProp>
           <stringProp name="queryArguments"></stringProp>
           <stringProp name="queryArgumentsTypes"></stringProp>
           <stringProp name="variableNames"></stringProp>
