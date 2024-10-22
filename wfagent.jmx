@@ -29,7 +29,7 @@
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Read_CSV Data_eid_NEW" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="filename">C:/Users/RAMESH SINGH/Downloads/apache-jmeter-5.3/csv/eid_NEW.csv</stringProp>
+          <stringProp name="filename">/home/ubuntu/apache-jmeter-5.3/bin/TestData/eid_NEW.csv</stringProp>
           <boolProp name="ignoreFirstLine">true</boolProp>
           <boolProp name="quotedData">true</boolProp>
           <boolProp name="recycle">true</boolProp>
@@ -45,7 +45,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;event_id&quot;: ${eid_NEW)&#xd;
+  &quot;event_id&quot;: ${eid_NEW}&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
