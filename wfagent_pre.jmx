@@ -259,7 +259,7 @@ try {
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Read_CSV Data_ mpid_did" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="filename">C:/Users/RAMESH SINGH/Downloads/apache-jmeter-5.3/csv/did_mpid.csv</stringProp>
+          <stringProp name="filename">/home/ubuntu/apache-jmeter-5.3/bin/TestData/did_mpid.csv</stringProp>
           <boolProp name="ignoreFirstLine">true</boolProp>
           <boolProp name="quotedData">true</boolProp>
           <boolProp name="recycle">true</boolProp>
