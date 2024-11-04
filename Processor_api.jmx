@@ -40,9 +40,11 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&#xd;
-    &quot;data&quot;: &quot;EjdIKPzgMHPr4xXb/xhJYJgARxgvJNL04bzHfjEHsGbw4/REUXU4WzRox9SCBF8/nMiZTJmiaHwaBj5SljEfe4YRlQJaX2KNpBia9JcrkGTlaHiemNWxMQw6iwKzoNvepkviMeZpOD2EyopMcH59mKkIk5kL3JuyUWZw9yp5+uhtHf3xWM2916pl9EVcHsYGbemIzECQ2s8y25Qq4LHv6vFO0u80Vj66vX9ZL7VD3dYhxPZ7VacodN09FmMoICsqz1mk9+MOJGJ2qofGyLNuHOiDFSDCfagExHHCfY4DnvMYyUUojzbVjt8/ZVEleOVjJKp+3aGmPejSM1ni5o89yj7i8nkSu54+BKY=&quot;,&#xd;
-    &quot;context&quot;:&quot;abc_client&quot;&#xd;
+                <stringProp name="Argument.value">{&quot;data&quot;: {&#xd;
+    &quot;encryptedData&quot;: &quot;VSpFNvWyNTSjsCfPs0wPc4wQVBRqaN/66LCLIywHr13eoOwiAS4mAmcv0MrdUUZuw5qFGp+uOGNCRjJ2zXUQd5sYzmZWWGGPzFfdutcplCu6dmaakdmxMxAtyEqmrNbV4TGne6skaj+AiYwBJ2Jwt6UHn9VmjYCpVSFitmxx/uc4Xq2kFIrpiut1qVNDSY4bXumCkxGJ0pQuhNQupqPzpuJM27RcDXD96F9RNLIJnKQy&quot;,&#xd;
+    &quot;authTag&quot;: &quot;KPw2jYnFMF4/Ji3wmwqV4w==&quot;&#xd;
+},&#xd;
+&quot;contextKey&quot;: &quot;CONTEXT_DEMO_USER&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
