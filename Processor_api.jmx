@@ -50,7 +50,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">ec2-65-0-106-251.ap-south-1.compute.amazonaws.com</stringProp>
+          <stringProp name="HTTPSampler.domain">ec2-65-2-78-242.ap-south-1.compute.amazonaws.com</stringProp>
           <stringProp name="HTTPSampler.port">5000</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
