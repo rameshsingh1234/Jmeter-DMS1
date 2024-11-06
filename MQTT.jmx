@@ -250,7 +250,7 @@
         <net.xmeter.samplers.SubSampler guiclass="net.xmeter.gui.SubSamplerUI" testclass="net.xmeter.samplers.SubSampler" testname="MQTT Sub" enabled="true">
           <stringProp name="mqtt.topic_name">testtopic/TestDemo1</stringProp>
           <stringProp name="mqtt.qos_level">2</stringProp>
-          <boolProp name="mqtt.add_timestamp">true</boolProp>
+          <boolProp name="mqtt.add_timestamp">false</boolProp>
           <boolProp name="mqtt.debug_response">true</boolProp>
           <stringProp name="mqtt.sample_condition">number of received messages</stringProp>
           <stringProp name="mqtt.sample_condition_value">${__P(Thread, 1)}</stringProp>
