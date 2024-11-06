@@ -40,8 +40,8 @@
             <stringProp name="mqtt.clientcert_password"></stringProp>
             <stringProp name="mqtt.user_name"></stringProp>
             <stringProp name="mqtt.password"></stringProp>
-            <stringProp name="mqtt.client_id_prefix">mqttx_0cfe3bb9</stringProp>
-            <boolProp name="mqtt.client_id_suffix">true</boolProp>
+            <stringProp name="mqtt.client_id_prefix"></stringProp>
+            <boolProp name="mqtt.client_id_suffix">false</boolProp>
             <stringProp name="mqtt.conn_keep_alive">300</stringProp>
             <stringProp name="mqtt.conn_attampt_max">0</stringProp>
             <stringProp name="mqtt.reconn_attampt_max">0</stringProp>
@@ -87,7 +87,7 @@
             <hashTree/>
           </hashTree>
           <net.xmeter.samplers.PubSampler guiclass="net.xmeter.gui.PubSamplerUI" testclass="net.xmeter.samplers.PubSampler" testname="MQTT Publiser" enabled="true">
-            <stringProp name="mqtt.topic_name">testtopic/load</stringProp>
+            <stringProp name="mqtt.topic_name">testtopic/TestDemo1</stringProp>
             <stringProp name="mqtt.qos_level">2</stringProp>
             <boolProp name="mqtt.add_timestamp">false</boolProp>
             <stringProp name="mqtt.message_type">Random string with fixed length</stringProp>
@@ -97,6 +97,43 @@
           </net.xmeter.samplers.PubSampler>
           <hashTree>
             <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <sentBytes>true</sentBytes>
+                  <url>true</url>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                  <connectTime>true</connectTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+            <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
               <boolProp name="ResultCollector.error_logging">false</boolProp>
               <objProp>
                 <name>saveConfig</name>
@@ -164,8 +201,8 @@
           <stringProp name="mqtt.clientcert_password">-----BEGIN PRIVATE KEY----- MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCP5gbHbEy5qkzJ 2olQseXxEUHmwI2TJh7uiJ+ziVnV8kCE5+H6Z0Xz2uM3i5zn1qcDTqXBygx9j7OM lxJwx+2m58KnJUvO5yYFetn08zdPnzQeKj9sotI0jWoFViUOFaYrM9M0LTRoPRCT jCfxkC8NtpQr1H88trP56fIgUzM+9GZ6x+t63b6UVq8QQXssrVNk15pF6CEP2B3l eRCEChAhoGIKpLTUpN0s52yOiWZItqAX/p1Xfso+OwNmi22qxPW3p/TnEwaXisJG YoB78ici56RvJGX6uiVBQFLT0CeSlcHsNKwe73CRrIPT3Ccm75+MPGnrw8G7tsUy h8SML9xfAgMBAAECggEAJWdKPc31x5Dvssw+Qx5qwZWVxrAoXKZdBe23bUh3dHgq syE/CQKNGUy9IPQGTfDqqp5n0Y5+Xqjap+Gg5nXhXTAC1cWJBffpVyVOwC/0IZsl Re3/XHKaJxTXCRoSOa4A6lvnOznA1JOC2odk3pJ22J6rtxTeGd73uy9HQ4W83VDv 6Gc+y5pJhohjBf21Uzbef/ChaFOUlaTsYrC+NPpb3xQ2/h62d9Z8ZWgtWYneoE9c 5Q/ir0zee2NFt66ZSQ5bj5k7JXDQ4xRs3W4YBo6D74P+ST18EMZ0WHdzfCQKGg8w n2j4s6guktFDhjb7fsVDVniAvYjV5RV/YFgHiCQeuQKBgQDJiY5h0VNovJu/P3zm 8N5hYSymiJwIK59USqgO+XQHMOtuMPtpEmtYTFzOb+PPzHtB4nhDwMVvRvd2fgUV e0BGJLPZoWPW5o4ZDkN6u7umtSQlMdxg5VgqAJp3fFguIeCPknCUuL8FwmTBgA6V ++mPFWRV400Kxc2v/prqBIlVYwKBgQC2yP4o2txTVfNjX86sS1/VX8G20SoPdzOx T3rOwFUSV1S6WTjwSmxPTefiZUokA+OG5fDATTMGPBw8Y7vQbcyZmpsZp3TQJUh2 ZagCgpNOdejrYGPRHPqiBKUEFqFnETOCxVd32o1BiwqHxYLps3cpnCFw8yzzjeGu o9EVfyo71QKBgBK1lmY2TIv4lmzWs/2sdriLkN2U6QdJJW1p0NgzCDZysCh2m6BR eW2lCSiQ8pEj5n1jTM7dYnbGG8sAP/CSlJDub1PQy7fzh1WEIXePXghH4KcjTdYg 9GJR1AUrofQGaRZq/dCQpgse1MOx46jAzhneXoYqp8hMPKAN/suiyC0JAoGADmIQ hdx6+9/GkCpI1Av2VY78aktZOPBTU/+CFWTTDOdsVmGQ9m+UyETEG2+G/wCDVekg IbGxcysluabLb6JEOE4PKFyh94MHibGEH/ZwavsiQetKz3itTDR7W7AAMWEMIZ0v vdGnzeGICZkELSmfFdogU4f/IIconBpt6HgiNaUCgYEAmbmi4ow3rzxrwyUH+wcK tgebII/FPO6gDL2lNi8cmq07GLBFH3CDMmM4XedncFMeQ9BZTbEdxsCVIMZcubLQ SJ2XZZSk6PQUCx2yjejIC1eZhfE+pcuM2qgO37E6sltmhz7M6ju1qThyuk0himAl iOGSewoNRbSYoYkZIQZPJvY= -----END PRIVATE KEY-----</stringProp>
           <stringProp name="mqtt.user_name"></stringProp>
           <stringProp name="mqtt.password"></stringProp>
-          <stringProp name="mqtt.client_id_prefix">mqttx_0cfe3bb9</stringProp>
-          <boolProp name="mqtt.client_id_suffix">true</boolProp>
+          <stringProp name="mqtt.client_id_prefix"></stringProp>
+          <boolProp name="mqtt.client_id_suffix">false</boolProp>
           <stringProp name="mqtt.conn_keep_alive">300</stringProp>
           <stringProp name="mqtt.conn_attampt_max">0</stringProp>
           <stringProp name="mqtt.reconn_attampt_max">0</stringProp>
@@ -211,12 +248,12 @@
           <hashTree/>
         </hashTree>
         <net.xmeter.samplers.SubSampler guiclass="net.xmeter.gui.SubSamplerUI" testclass="net.xmeter.samplers.SubSampler" testname="MQTT Sub" enabled="true">
-          <stringProp name="mqtt.topic_name">testtopic/load</stringProp>
+          <stringProp name="mqtt.topic_name">testtopic/TestDemo1</stringProp>
           <stringProp name="mqtt.qos_level">2</stringProp>
           <boolProp name="mqtt.add_timestamp">true</boolProp>
           <boolProp name="mqtt.debug_response">true</boolProp>
-          <stringProp name="mqtt.sample_condition">specified elapsed time (ms)</stringProp>
-          <stringProp name="mqtt.sample_condition_value">1000</stringProp>
+          <stringProp name="mqtt.sample_condition">number of received messages</stringProp>
+          <stringProp name="mqtt.sample_condition_value">${__P(Thread, 1)}</stringProp>
         </net.xmeter.samplers.SubSampler>
         <hashTree>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response code" enabled="true">
