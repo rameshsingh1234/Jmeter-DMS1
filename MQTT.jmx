@@ -87,12 +87,12 @@
             <hashTree/>
           </hashTree>
           <net.xmeter.samplers.PubSampler guiclass="net.xmeter.gui.PubSamplerUI" testclass="net.xmeter.samplers.PubSampler" testname="MQTT Publiser" enabled="true">
-            <stringProp name="mqtt.topic_name">test/test</stringProp>
+            <stringProp name="mqtt.topic_name">testtopic/load</stringProp>
             <stringProp name="mqtt.qos_level">2</stringProp>
             <boolProp name="mqtt.add_timestamp">false</boolProp>
-            <stringProp name="mqtt.message_type">String</stringProp>
-            <stringProp name="mqtt.message_type_fixed_length">1024</stringProp>
-            <stringProp name="mqtt.message_to_sent">Demo test 1 </stringProp>
+            <stringProp name="mqtt.message_type">Random string with fixed length</stringProp>
+            <stringProp name="mqtt.message_type_fixed_length">10</stringProp>
+            <stringProp name="mqtt.message_to_sent">Demo </stringProp>
             <boolProp name="mqtt.retained_message">false</boolProp>
           </net.xmeter.samplers.PubSampler>
           <hashTree>
@@ -211,9 +211,9 @@
           <hashTree/>
         </hashTree>
         <net.xmeter.samplers.SubSampler guiclass="net.xmeter.gui.SubSamplerUI" testclass="net.xmeter.samplers.SubSampler" testname="MQTT Sub" enabled="true">
-          <stringProp name="mqtt.topic_name">test/test</stringProp>
+          <stringProp name="mqtt.topic_name">testtopic/load</stringProp>
           <stringProp name="mqtt.qos_level">2</stringProp>
-          <boolProp name="mqtt.add_timestamp">false</boolProp>
+          <boolProp name="mqtt.add_timestamp">true</boolProp>
           <boolProp name="mqtt.debug_response">true</boolProp>
           <stringProp name="mqtt.sample_condition">specified elapsed time (ms)</stringProp>
           <stringProp name="mqtt.sample_condition_value">1000</stringProp>
