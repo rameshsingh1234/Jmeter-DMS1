@@ -286,6 +286,8 @@ log.info(&quot;New variable value: &quot; + vars.get(&quot;newVariable&quot;))
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
+        <net.xmeter.samplers.DisConnectSampler guiclass="net.xmeter.gui.DisConnectSamplerUI" testclass="net.xmeter.samplers.DisConnectSampler" testname="MQTT DisConnect" enabled="true"/>
+        <hashTree/>
       </hashTree>
     </hashTree>
   </hashTree>
