@@ -209,6 +209,25 @@ vars.put(&quot;txnAmt&quot;, String.valueOf(100 + (vars.get(&quot;customIteratio
           <stringProp name="mqtt.sample_condition_value">1000</stringProp>
         </net.xmeter.samplers.SubSampler>
         <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">// Get the value from the property
+int threadValue = Integer.parseInt(props.get(&quot;Thread&quot;) ?: &quot;1&quot;)
+
+// Add 2 to the value
+int result = threadValue + 5
+
+// Set the result as a new variable
+vars.put(&quot;newVariable&quot;, String.valueOf(result))
+
+// Optional: Log the new variable for debugging purposes
+log.info(&quot;New variable value: &quot; + vars.get(&quot;newVariable&quot;))
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="49586">200</stringProp>
@@ -217,6 +236,16 @@ vars.put(&quot;txnAmt&quot;, String.valueOf(100 + (vars.get(&quot;customIteratio
             <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
             <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response message count" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1639640921">Received ${newVariable} of message.</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_message</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">1</intProp>
           </ResponseAssertion>
           <hashTree/>
           <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
@@ -255,35 +284,6 @@ vars.put(&quot;txnAmt&quot;, String.valueOf(100 + (vars.get(&quot;customIteratio
             </objProp>
             <stringProp name="filename"></stringProp>
           </ResultCollector>
-          <hashTree/>
-          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="false">
-            <stringProp name="cacheKey">true</stringProp>
-            <stringProp name="filename"></stringProp>
-            <stringProp name="parameters"></stringProp>
-            <stringProp name="script">// Get the value from the property
-int threadValue = Integer.parseInt(props.get(&quot;Thread&quot;) ?: &quot;1&quot;)
-
-// Add 2 to the value
-int result = threadValue + 4
-
-// Set the result as a new variable
-vars.put(&quot;newVariable&quot;, String.valueOf(result))
-
-// Optional: Log the new variable for debugging purposes
-log.info(&quot;New variable value: &quot; + vars.get(&quot;newVariable&quot;))
-</stringProp>
-            <stringProp name="scriptLanguage">groovy</stringProp>
-          </JSR223PostProcessor>
-          <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response message count" enabled="false">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="-1639640921">Received ${newVariable} of message.</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_message</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">1</intProp>
-          </ResponseAssertion>
           <hashTree/>
         </hashTree>
         <net.xmeter.samplers.DisConnectSampler guiclass="net.xmeter.gui.DisConnectSamplerUI" testclass="net.xmeter.samplers.DisConnectSampler" testname="MQTT DisConnect" enabled="true"/>
